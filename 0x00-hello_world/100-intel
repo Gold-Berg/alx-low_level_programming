@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -s -masm+intel $CFILE | ASM_FILE="${CFILE%.*}.s"
+$CFILE="file.c" | gcc -s  -masm=intel $CFILE -o "${CFILE%.*}.S"
