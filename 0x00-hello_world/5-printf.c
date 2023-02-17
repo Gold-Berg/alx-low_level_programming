@@ -1,4 +1,4 @@
-#include <stdio.sh>
+#include <stdio.h>
 
 /**
  * main - this is a main function
