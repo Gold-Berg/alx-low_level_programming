@@ -3,11 +3,10 @@
 /**
  * main - this ia a main function
  *
- * Return: Always 0
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	printf("printing a string on the standard output.");
 	return (0);
 }
