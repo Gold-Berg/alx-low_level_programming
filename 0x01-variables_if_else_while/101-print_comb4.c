@@ -15,12 +15,12 @@ int main(void)
 		{
 			for (k = j + 1; k <= 9; k++)
 			{
-				if (i != j || i != j || j != k || i < j || j < k)
+				if (i != j && i != j && j != k && i < j && j < k)
 				{
 					putchar(i + '0');
 					putchar(j + '0');
 					putchar(k + '0');
-					if (i != j && i != k && j != k)
+					if (i + j + k != 24)
 					{
 						putchar(',');
 						putchar(' ');
