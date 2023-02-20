@@ -15,23 +15,22 @@ int main(void)
 		{
 			for (k = j + 1; k < 10; k++)
 			{
-				if (i != j && i != j && j != k)
+				if (i != j && i != j && j != k && i < j && j < k)
 				{
 					putchar(i + '0');
 					putchar(j + '0');
 					putchar(k + '0');
 					if (i != j && i != k && j != k)
 					{
-						if (i != 7 || j != 9 || k != 9)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
+
 				}
 			}
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
