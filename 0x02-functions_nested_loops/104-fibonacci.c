@@ -8,7 +8,7 @@ int main(void)
 {
 	int a = 1, b = 2, c, i;
 
-	printf("%d, %d, ", a, b);
+	printf("1, 2, ");
 
 	for (i = 3; i <= 98; i++)
 	{
@@ -22,5 +22,4 @@ int main(void)
 		b = c;
 	}
 	printf("\n");
-	return (0);
-}
+
