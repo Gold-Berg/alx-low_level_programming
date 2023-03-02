@@ -1,19 +1,27 @@
 #include "main.h"
+
+/**
+ * print_number - Prints an integer
+ *
+ * @n: The integer to print
+ */
 void print_number(int n)
 {
-    int divisor = 1;
+	unsigned int real;
 
-    if (n < 0) {
-        putchar('-');
-        n *= -1;
-    }
+	if (n < 0)
+	{
+		_putchar('-');
+		real = -n;
 
-    while (n / divisor >= 10)
-        divisor *= 10;
-
-    while (divisor != 0) {
-        putchar((n / divisor) % 10 + '0');
-        divisor /= 10;
-    }
+	}
+	else
+	{
+		real = n;
+	}
+	if (real / 10)
+	{
+		print_number(real / 10);
+	}
+	_putchar((real % 10) + '0');
 }
-
