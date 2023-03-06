@@ -10,12 +10,8 @@
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int mark;
-	char *pdest = dest;
-	char const *psrc = src;
 
 	for (mark = 0; mark < n; mark++)
-	{
-		*pdest = *psrc++;
-	}
+		dest[mark] = src[mark];
 	return (dest);
 }
