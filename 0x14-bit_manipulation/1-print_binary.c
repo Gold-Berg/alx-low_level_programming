@@ -7,6 +7,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int *ni = &n;
+
 	if (n >= 1)
 	{
 		print_binary(n >> 1);
