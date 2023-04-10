@@ -1,5 +1,4 @@
 #include "main.h"
-#define size (sizeof(unsigned long int) * 8 - 1)
 /**
  * get_bit - returns the value of a bit at an index in a decimal number
  * @n: number to search

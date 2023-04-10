@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define size (sizeof(unsigned long int) * 8 - 1)
 #include <stdio.h>
 #include <stdlib.h>
 
