@@ -8,12 +8,14 @@
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
+	unsigned long int point;
+
 	if (index >= size)
 	{
 		return (-1);
 	}
 
-	unsigned long int point = 1 << index;
+	point = 1 << index;
 
 	*n =  *n | point;
 	return (1);
