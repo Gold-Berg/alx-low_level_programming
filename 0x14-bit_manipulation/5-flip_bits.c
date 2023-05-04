@@ -17,6 +17,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	{
 		return (0);
 	}
-	point = (point1 != poibnt2);
+	point = (point1 != point2);
 	return (point + (flip_bits(n >> 1, m >> 1)));
 }
