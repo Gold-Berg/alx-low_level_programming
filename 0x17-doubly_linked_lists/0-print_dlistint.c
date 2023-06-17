@@ -1,15 +1,20 @@
 #include "lists.h"
+/**
+ * print_dlistint - prints element in a linked list
+ * @h: head
+ * Return: const
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
-size_t count = 0;
-const dlistint_t *current = h;
+	size_t count = 0;
+	const dlistint_t *point = h;
 
-while (current != NULL)
-{
-printf("%d\n", current->n);
-count++;
-current = current->next;
-}
+	while (point != NULL)
+	{
+		printf("%d\n", point->n);
+		count++;
+		point = point->next;
+	}
 
-return count;
+	return (count);
 }
