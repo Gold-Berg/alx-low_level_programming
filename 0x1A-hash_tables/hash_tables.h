@@ -1,5 +1,5 @@
-#ifndef HASH_TABLE_H
-#define HASH_TABLE_H
+#ifndef HEADER_FILE
+#define HEADER_FILE
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -41,3 +41,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
 void hash_table_print(const hash_table_t *ht);
 void hash_table_delete(hash_table_t *ht);
 #endif
+
+
