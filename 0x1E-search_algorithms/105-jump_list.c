@@ -1,9 +1,10 @@
 #include "search_algos.h"
 #include <math.h>
 
+
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	// size_t end = sqrt(size), 
+	// size_t end = sqrt(size),
 	size_t start, i = 1;
 	listint_t *temp = list;
 	if (list == NULL || size == 0)
@@ -15,7 +16,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
 		list = &(list)->next[0];
 		i = i * 2;
-		
+
 	}
 		return list;
 	(void)temp;
