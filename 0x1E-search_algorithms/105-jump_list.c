@@ -12,25 +12,36 @@
 
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-	// size_t end = sqrt(size),
-	size_t start, i = 1;
-	listint_t *temp = list;
-	if (list == NULL || size == 0)
-		return NULL;
-	while(list != NULL && list->next != NULL)
-	{
-		printf("%d-----%zu\n",  list->n, i);
-		printf("%p-----%p\n",  (void*)(list), (void *)(list)->(&(next[2])));
+    size_t step, prev_index;
+    listint_t *current, *prev;
 
-		list = &(list)->next[0];
-		i = i * 2;
+    if (!list || size == 0)
+        return (NULL);
 
-	}
-		return list;
-	(void)temp;
-	(void)size;
-	// (void)end;
-	(void)i;
-	(void)start;
-	(void)value;
+    step = sqrt(size);
+    prev = current = list;
+
+    while (current->index < size && current->n < value)
+    {
+        prev = current;
+        for (prev_index = 0; current->next && prev_index < step; prev_index++)
+            current = current->next;
+
+        printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
+
+        if (current->n >= value)
+            break;
+    }
+
+    printf("Value found between indexes [%lu] and [%lu]\n", prev->index, current->index);
+
+    while (prev && prev->index <= current->index)
+    {
+        printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
+        if (prev->n == value)
+            return (prev);
+        prev = prev->next;
+    }
+
+    return (NULL);
 }
